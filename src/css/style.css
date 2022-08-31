@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdrDefinedRangesWrapper, .rdrMonthAndYearWrapper,.rdrMonthrd ,.rdrMonths ,.rdrMonthsVertical{
+    display: none;
+}
+.rdrDateDisplayWrapper{
+    width: 300px;
+}
