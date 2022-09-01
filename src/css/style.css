@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.rdrDefinedRangesWrapper, .rdrMonthAndYearWrapper,.rdrMonthrd ,.rdrMonths ,.rdrMonthsVertical{
+.rdrDefinedRangesWrapper,.rdrMonthrd {
     display: none;
 }
 .rdrDateDisplayWrapper{
-    width: 300px;
+    width: 100%;
+}
+.rdrDateRangePickerWrapper{
+    border: 1px solid rgb(163, 163, 163);
 }
