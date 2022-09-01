@@ -7,6 +7,7 @@ import {
 import Dashboard from "./componenets/Dashboard";
 import Team from "./componenets/Team";
 import Project from "./componenets/Project";
+import CreateTicket from "./componenets/CreateTicket";
 function App() {
   return (
     <Router>
@@ -15,6 +16,8 @@ function App() {
          <Route exect  path="/" element={<Dashboard/>}/>
          <Route exect  path="/team" element={<Team/>}/>
          <Route exect  path="/project" element={<Project/>}/>
+         <Route exect  path="/create/ticket" element={<CreateTicket/>}/>
+         
         </Routes>
       </div>
     </Router>

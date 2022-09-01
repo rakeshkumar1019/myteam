@@ -4,12 +4,6 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 
-// const navigation = [
-//   { name: 'Dashboard', href: '/', current: false },
-//   { name: 'Team', href: '/team', current: true },
-//   { name: 'Projects', href: '/projects', current: false },
-// ]
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -35,16 +29,6 @@ export default function Navbar({navbar}) {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  {/* <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
-                    alt="Workflow"
-                  />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
-                    alt="Workflow"
-                  /> */}
                  <h1 className='text-white bg-lime-800 px-5 py-1 rounded-md font-medium font-bold text-xl'>
                     NUXEO WEB UI
                 </h1> 
@@ -62,6 +46,7 @@ export default function Navbar({navbar}) {
                       >
                         Dashboard
                       </Link>
+
                       <Link
                         to="/team"
                         className={classNames(
@@ -73,6 +58,7 @@ export default function Navbar({navbar}) {
                       >
                         Team
                       </Link>
+
                       <Link
                         to="/project"
                         className={classNames(
@@ -84,6 +70,19 @@ export default function Navbar({navbar}) {
                       >
                         Project
                       </Link>
+
+                      <Link
+                        to="/create/ticket"
+                        className={classNames(
+                           currentNav === "createTicket"  ? 'bg-gray-900 text-white' : 'text-white-700 hover:bg-gray-900 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={ currentNav === "createTicket" ? 'page' : undefined}
+                        onClick={() => setCurrentNav("createTicket")}
+                      >
+                        Create Ticket
+                      </Link>
+
                   </div>
                 </div>
               </div>
@@ -195,6 +194,19 @@ export default function Navbar({navbar}) {
                  onClick={() => setCurrentNav("project")}
                 >
                   Project
+                </Disclosure.Button>
+
+                <Disclosure.Button
+                  as="a"
+                  href="/create/ticket"
+                  aria-current={ currentNav === "createTicket" ? 'page' : undefined}
+                  className={classNames(
+                    currentNav === "createTicket"  ? 'bg-gray-900 text-white' : 'text-white-700 hover:bg-gray-900 hover:text-white',
+                   'block px-3 py-2 rounded-md text-base font-medium'
+                 )}
+                 onClick={() => setCurrentNav("projecreateTicketct")}
+                >
+                  Create Ticket
                 </Disclosure.Button>
             
             </div>

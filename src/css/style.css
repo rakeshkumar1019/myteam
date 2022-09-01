@@ -11,3 +11,9 @@
 .rdrDateRangePickerWrapper{
     border: 1px solid rgb(163, 163, 163);
 }
+.container-box{
+    border: 1px solid gray;
+    background-color: rgb(59 130 246 / 0.5);
+    height: 180px;
+    border-radius: 10px;
+}
