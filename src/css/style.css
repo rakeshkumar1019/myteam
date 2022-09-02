@@ -17,3 +17,9 @@
     height: 180px;
     border-radius: 10px;
 }
+.custome-dropdown{
+    position: absolute;
+    inset: 0px auto auto 0px; 
+    margin: 0px; 
+    transform: translate3d(4.5px, 72px, 0px);
+}

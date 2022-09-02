@@ -83,6 +83,18 @@ export default function Navbar({navbar}) {
                         Create Ticket
                       </Link>
 
+                      <Link
+                        to="/reviews"
+                        className={classNames(
+                           currentNav === "reviews"  ? 'bg-gray-900 text-white' : 'text-white-700 hover:bg-gray-900 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={ currentNav === "reviews" ? 'page' : undefined}
+                        onClick={() => setCurrentNav("reviews")}
+                      >
+                        Give Review
+                      </Link>
+
                   </div>
                 </div>
               </div>
@@ -207,6 +219,19 @@ export default function Navbar({navbar}) {
                  onClick={() => setCurrentNav("projecreateTicketct")}
                 >
                   Create Ticket
+                </Disclosure.Button>
+
+                <Disclosure.Button
+                  as="a"
+                  href="/reviews"
+                  aria-current={ currentNav === "reviews" ? 'page' : undefined}
+                  className={classNames(
+                    currentNav === "reviews"  ? 'bg-gray-900 text-white' : 'text-white-700 hover:bg-gray-900 hover:text-white',
+                   'block px-3 py-2 rounded-md text-base font-medium'
+                 )}
+                 onClick={() => setCurrentNav("reviews")}
+                >
+                  Give Review
                 </Disclosure.Button>
             
             </div>
